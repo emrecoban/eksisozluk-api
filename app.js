@@ -1,7 +1,11 @@
 import express from "express";
 import fetch from "node-fetch";
+import cors from "cors";
 
 const app = express();
+app.use(cors({
+  origin: 'https://eksishot.vercel.app'
+}));
 
 app.get('/getEntry', async (req, res) => {
   try {
@@ -15,6 +19,6 @@ app.get('/getEntry', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('Server listening on port 3000');
 });
