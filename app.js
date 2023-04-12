@@ -4,7 +4,7 @@ import cors from "cors";
 
 const app = express();
 app.use(cors({
-  origin: ['https://eksishot.vercel.app', 'https://locahost:5173']
+  origin: ['https://eksishot.vercel.app', 'http://locahost:5173']
 }));
 
 app.get('/getEntry', async (req, res) => {
