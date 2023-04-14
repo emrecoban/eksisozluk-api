@@ -1,5 +1,5 @@
 # URL Source Code Retrieval API
-This Node.js API service is built using `express`, `cors` and `node-fetch`. It retrieves the source code of a website as a response by taking a URL parameter. However, it is restricted to only accept requests from specific URLs.
+This Node.js API service is built using `express`, `cors`, `image-to-base64`, and `node-fetch`. It retrieves the source code of a website as a response by taking a URL parameter. However, it is restricted to only accept requests from specific URLs.
 
 ## Installation
 1. Clone or download this project.
