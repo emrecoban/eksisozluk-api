@@ -13,17 +13,30 @@ app.get('/getEntry', async (req, res) => {
     const url = req.query.url;
     console.log("GELEN url => ", url.includes("ekstat"))
     if(url.includes("ekstat")){
-      imageToBase64(url)
+      console.log("RESİM url: ", url)
+      if(url.includes("default-profile")){
+        imageToBase64(`https:${url}`)
       .then(
           (response) => {
               res.send(`data:image/jpeg;base64,${response}`);
           }
-      )
-      .catch(
+      ).catch(
+        (error) => {
+            console.log(error);
+        }
+    )
+      }else{
+        imageToBase64(url)
+        .then(
+            (response) => {
+                res.send(`data:image/jpeg;base64,${response}`);
+            }
+        ).catch(
           (error) => {
               console.log(error);
           }
       )
+      }
     }else{
       const response = await fetch(url);
       const html = await response.text();
