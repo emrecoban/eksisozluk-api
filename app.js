@@ -18,7 +18,7 @@ app.get('/getEntry', async (req, res) => {
         imageToBase64(`https:${url}`)
       .then(
           (response) => {
-              res.send(`data:image/jpeg;base64,${response}`);
+              res.send(`data:image/svg+xml;base64,${response}`);
           }
       ).catch(
         (error) => {
