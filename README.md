@@ -32,7 +32,6 @@ Example response:
 ...
 ```
 
-ekstat
 - `<JPG-URL>?ekstat`: This API server supports to convert `.JPG` image files to base64 format.
 
 Example request:
