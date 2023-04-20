@@ -31,5 +31,19 @@ Example response:
     <title>ekşi sözlük - kutsal bilgi kaynağı</title>
 ...
 ```
+
+ekstat
+- `<JPG-URL>?ekstat`: This API server supports to convert `.JPG` image files to base64 format.
+
+Example request:
+```bash
+GET /getEntry?url=https://www.shutterstock.com/image-vector/colorful-design-icon-jpg-file-260nw-2010625445.jpg?ekstat
+```
+
+Example response:
+```
+data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoH...
+```
+
 ## License
 This project is licensed under the MIT License. See the **LICENSE** file for more information.
